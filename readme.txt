@@ -4,11 +4,7 @@ Table of Contents
 1. Directory structure of the CloudSim Toolkit
 2. Software requirements: Java version 1.6 or newer 
 3. Installation and running the CloudSim Toolkit
-4. Running the CloudSim examples
-5. Learning CloudSim
-6. Compiling CloudSim: using Ant
-
-
+4. Important Notes.
 
 1. Directory structure of the CloudSim Toolkit
 ----------------------------------------------
@@ -24,59 +20,35 @@ cloudsim/                -- top level CloudSim directory
 2. Software requirements: Java version 1.6 or newer
 ---------------------------------------------------
 
-CloudSim has been tested and ran on Sun's Java version 1.6.0 or newer.
+The provided toolkit is an extended version of Cloudsim, in which we introduced a range of different scheduling algorithms through different classes. 
+CloudSim-BBO has been tested and ran on Sun's Java version 1.6.0 or newer.
 Older versions of Java are not compatible.
 If you have non-Sun Java version, such as gcj or J++, they may not be compatible.
-You also need to install Ant to compile CloudSim (explained in more details later).
 
 
 3. Installation and running the CloudSim Toolkit
 ------------------------------------------------
 
-You just need to unpack the CloudSim file to install.
-If you want to remove CloudSim, then remove the whole cloudsim directory.
-You do not need to compile CloudSim source code. The JAR files are
-provided to compile and to run CloudSim applications:
+There are 4 steps to run our codes properly:
+          1- You should import the code in IDE having cloned the codes from GitHub.
+          2- Make sure the required packages in our code like  "Colt" are included in the solution.
+          3- Run the intended class to see outputs from our examples, like "BBOLoadBalancing".
+          4- See and note the outputs in order to perform statistical analysis.
 
-  * jars/cloudsim-<VERSION>.jar                    -- contains the CloudSim class files
-  * jars/cloudsim-<VERSION>-sources.jar            -- contains the CloudSim source code files
-  * jars/cloudsim-examples-<VERSION>.jar           -- contains the CloudSim examples class files
-  * jars/cloudsim-examples-<VERSION>-sources.jar   -- contains the CloudSim examples source code files
-
-
-4. Running the CloudSim examples
---------------------------------
-
-Please read how to run the CloudSim examples in examples.txt
+The Directory in which our codes are provided: 
+I.     BBO algorithm: ./CloudsimBio-GeographySource/examples/org/cloudbus/cloudsim/examples/LoadBalancingBBO.java
+II.    Genetic Algorithm: ./CloudsimBio-GeographySource/examples/org/cloudbus/cloudsim/examples/LoadBalancingGA.java
+III.   PSO Algorithm: ./CloudsimBio-GeographySource/examples/org/cloudbus/cloudsim/examples/LoadBalancingPSO.java
+IV.    Round Robin: ./CloudsimBio-GeographySource/examples/org/cloudbus/cloudsim/examples/LoadBalancingRoundRobin2.java
+V.     Max-Min Algorithm: ./CloudsimBio-GeographySource/examples/org/cloudbus/cloudsim/examples/LoadBalancingMaxMin.java
+VI.    Min-Min Algorithm: ./CloudsimBio-GeographySource/examples/org/cloudbus/cloudsim/examples/LoadBalancingMinMin.java
 
 
-5. Learning CloudSim
---------------------
+4. Important Notes:
 
-To understand how to use CloudSim, please go through the examples provided
-in the examples/ directory.
-
-
-6. Compiling CloudSim: using Ant
---------------------------------
-
-This release contains a simple buildfile for compiling CloudSim classes.
-You need to have ant installed (http://ant.apache.org/).
-Ant can be used in both Windows and Unix/Linux environment.
-
-Usage:
-
-  * Being in the CloudSim root directory (cloudsim/), type 'ant' to compile all 
-    cloudsim source files, put them into the classes/ directory and to create 
-    a cloudsim-new.jar file in the jars/ directory
-    
-  * Being in the CloudSim root directory (cloudsim/), type 'ant clean' to delete 
-    all the compiled classes and the classes/ directory itself. The generated 
-    cloudsim-new.jar is not deleted.
-
-Note:
-
-  * You need to set up PATH for ant in Windows and/or Unix.
+  *  We highly recommend you to use Eclipse IDE to run our codes.
+  *  You can change the number of VMs, PMs, and Workloads according to your research targets.
+  *  In evolutionary algorithms, you can also change the maximum number of Generations, the number of problem dimensions and the mutation probablity (Default is 0.05).
   
   
 
